@@ -16,6 +16,7 @@ int main(void)
 static void prvSetupHardware(void)
 {
 	hGPIOInit();
+	SysTick_Config(16000000); // HSI is by default 16 MHz for STM32F407
 }
 
 void hGPIOInit(void)
